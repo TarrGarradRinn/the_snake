@@ -184,9 +184,11 @@ def handle_keys(snake_object):
             pygame.quit()
             raise SystemExit
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_UP and snake_object.direction != DOWN:
+            if event.key == pygame.K_UP and \
+                    snake_object.direction != DOWN:
                 snake_object.next_direction = UP
-            elif event.key == pygame.K_DOWN and snake_object.direction != UP:
+            elif event.key == pygame.K_DOWN and \
+                    snake_object.direction != UP:
                 snake_object.next_direction = DOWN
             elif (event.key == pygame.K_LEFT and
                   snake_object.direction != RIGHT):
